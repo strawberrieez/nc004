@@ -16,4 +16,8 @@ class ProfileRepo {
     debugPrint(list.toString());
     return profile;
   }
+
+  Future<void> createDoc(Profile data) async{
+    await FirebaseFirestore.instance.collection('nc004').doc(data.id).set(data.toMap());
+  }
 }

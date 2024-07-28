@@ -12,4 +12,9 @@ class ProfileRepoMock implements ProfileRepo {
   Future<List<Profile>> getColl() {
     throw UnimplementedError();
   }
+  
+  @override
+  Future<void> createDoc(Profile data) {
+    throw UnimplementedError();
+  }
 }

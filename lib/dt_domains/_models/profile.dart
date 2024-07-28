@@ -7,7 +7,7 @@ class Profile {
   final String name;
   final int age;
   final String gender;
-  final String catBreeds;
+  final String breeds;
   Profile({
     this.id = '',
     this.createdAt = '',
@@ -15,7 +15,7 @@ class Profile {
     this.name = '',
     this.age = 0,
     this.gender = '',
-    this.catBreeds = '',
+    this.breeds = '',
   });
 
   Profile copyWith({
@@ -25,7 +25,7 @@ class Profile {
     String? name,
     int? age,
     String? gender,
-    String? catBreeds,
+    String? breeds,
   }) {
     return Profile(
       id: id ?? this.id,
@@ -34,7 +34,7 @@ class Profile {
       name: name ?? this.name,
       age: age ?? this.age,
       gender: gender ?? this.gender,
-      catBreeds: catBreeds ?? this.catBreeds,
+      breeds: breeds ?? this.breeds,
     );
   }
 
@@ -47,7 +47,7 @@ class Profile {
     result.addAll({'name': name});
     result.addAll({'age': age});
     result.addAll({'gender': gender});
-    result.addAll({'cat_breeds': catBreeds});
+    result.addAll({'cat_breeds': breeds});
 
     return result;
   }
@@ -60,7 +60,7 @@ class Profile {
       name: map['name'] ?? '',
       age: map['age']?.toInt() ?? 0,
       gender: map['gender'] ?? '',
-      catBreeds: map['cat_breeds'] ?? '',
+      breeds: map['breeds'] ?? '',
     );
   }
 
@@ -70,7 +70,7 @@ class Profile {
 
   @override
   String toString() {
-    return 'Profile(id: $id, createdAt: $createdAt, imageUrl: $imageUrl, name: $name, age: $age, gender: $gender, catBreeds: $catBreeds)';
+    return 'Profile(id: $id, createdAt: $createdAt, imageUrl: $imageUrl, name: $name, age: $age, gender: $gender, breeds: $breeds)';
   }
 
   @override
@@ -84,7 +84,7 @@ class Profile {
         other.name == name &&
         other.age == age &&
         other.gender == gender &&
-        other.catBreeds == catBreeds;
+        other.breeds == breeds;
   }
 
   @override
@@ -95,6 +95,6 @@ class Profile {
         name.hashCode ^
         age.hashCode ^
         gender.hashCode ^
-        catBreeds.hashCode;
+        breeds.hashCode;
   }
 }

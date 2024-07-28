@@ -24,8 +24,22 @@ class ProfileListView extends StatelessWidget {
                 children: [
                   ...List.generate(
                     data.length,
-                    (index) => Text(data[index].age.toString()),
-                  )
+                    (index) => Card(
+                      color: Colors.blueGrey,
+                      child: ListTile(
+                        title: Text(data[index].name),
+                        subtitle: Text(data[index].breeds),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      _ct.createDoc();
+                    },
+                    child: const Text(
+                      "create doc",
+                    ),
+                  ),
                 ],
               ),
             ),

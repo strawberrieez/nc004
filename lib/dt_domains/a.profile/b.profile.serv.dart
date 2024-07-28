@@ -14,4 +14,9 @@ class ProfileServ {
   }
 
   readColl() => _pv.rxProfileList.stateAsync = _rp.getColl();
+
+  createDoc(Profile data) {
+    _pv.rxProfileList.st = [..._pv.rxProfileList.st]..insert(0, data);
+    return _rp.createDoc(data);
+  }
 }
