@@ -6,4 +6,6 @@ class ProfileListCtrl {
   increaseCounter() => _dt.rxCounter.setState((s) => s + 1);
 
   updateRandom() => Serv.sample.updateRandom();
+
+  readColl() => _sv.readColl();
 }

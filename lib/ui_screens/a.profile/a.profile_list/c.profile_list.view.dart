@@ -5,22 +5,31 @@ class ProfileListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(56),
-        child: ProfileListAppbar(),
-      ),
-      floatingActionButton: ProfileListFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ProfileListCharlie(),
-            ProfileListDelta(),
-            ProfileListEcho(),
-          ],
+    return Scaffold(
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(56),
+          child: ProfileListAppbar(),
         ),
-      ),
-    );
+        floatingActionButton: const ProfileListFab(),
+        body: OnBuilder<List<Profile>>.all(
+          listenTo: _dt.rxProfileList,
+          onWaiting: () => const Center(
+            child: CircularProgressIndicator(),
+          ),
+          onError: (error, refreshError) => const Text('error'),
+          onData: (data) => OnReactive(
+            () => Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...List.generate(
+                    data.length,
+                    (index) => Text(data[index].age.toString()),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ));
   }
 }
