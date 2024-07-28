@@ -17,66 +17,31 @@ class ProfileAddView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                OnFormBuilder(
-                  listenTo: _dt.rxForm,
-                  builder: () => TextField(
-                    controller: _dt.rxName.controller,
-                    decoration: InputDecoration(
-                      errorText: _dt.rxName.error,
-                      labelText: 'name',
-                      hintText: 'input cat name',
-                    ),
+                _dt.rxPickedImage.st == null
+                    ? const SizedBox.shrink()
+                    : SizedBox(
+                        height: 150,
+                        width: 150,
+                        child: Image.network(_dt.rxPickedImage.st!.path),
+                      ),
+                ElevatedButton(
+                  onPressed: () async {
+                    _dt.rxPickedImage.st = await ImagePicker().pickImage(source: ImageSource.gallery);
+                    debugPrint(_dt.rxPickedImage.st?.path.toString());
+                  },
+                  child: const Text(
+                    "Elevated Button",
                   ),
                 ),
+                const AddName(),
                 const SizedBox(height: 15),
-                OnFormBuilder(
-                  listenTo: _dt.rxForm,
-                  builder: () => TextField(
-                    controller: _dt.rxAge.controller,
-                    decoration: InputDecoration(
-                      errorText: _dt.rxAge.error,
-                      labelText: 'age',
-                      hintText: 'input cat age in month',
-                    ),
-                  ),
-                ),
+                const AddAge(),
                 const SizedBox(height: 15),
-                OnFormBuilder(
-                  listenTo: _dt.rxForm,
-                  builder: () => TextField(
-                    controller: _dt.rxGender.controller,
-                    decoration: InputDecoration(
-                      errorText: _dt.rxGender.error,
-                      labelText: 'gender',
-                      hintText: 'input cat gender',
-                    ),
-                  ),
-                ),
+                const AddGender(),
                 const SizedBox(height: 15),
-                OnFormBuilder(
-                  listenTo: _dt.rxForm,
-                  builder: () => TextField(
-                    controller: _dt.rxBreeds.controller,
-                    decoration: InputDecoration(
-                      errorText: _dt.rxBreeds.error,
-                      labelText: 'breeds',
-                      hintText: 'input cat breeds',
-                    ),
-                  ),
-                ),
+                const AddBreeds(),
                 const SizedBox(height: 15),
-                OnFormSubmissionBuilder(
-                  listenTo: _dt.rxForm,
-                  onSubmitting: () => const CircularProgressIndicator(),
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      await _ct.submit();
-                    },
-                    child: const Text(
-                      "submit",
-                    ),
-                  ),
-                ),
+                const AddSubmit(),
               ],
             ),
           ),

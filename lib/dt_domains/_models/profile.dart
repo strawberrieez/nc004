@@ -47,7 +47,7 @@ class Profile {
     result.addAll({'name': name});
     result.addAll({'age': age});
     result.addAll({'gender': gender});
-    result.addAll({'cat_breeds': breeds});
+    result.addAll({'breeds': breeds});
 
     return result;
   }

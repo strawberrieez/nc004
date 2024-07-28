@@ -9,8 +9,12 @@ class ProfileProv {
     ),
   );
 
-  final rxProfileList = RM.injectFuture<List<Profile>>(() => Future.value([]),
-      sideEffects: SideEffects(
-        initState: () => _sv.readColl(),
-      ));
+  final rxProfileList = RM.injectFuture<List<Profile>>(
+    () => Future.value([]),
+    sideEffects: SideEffects(
+      initState: () => _sv.readColl(),
+    ),
+  );
+
+  final rxPickedImage = RM.inject<XFile?>(() => null);
 }
