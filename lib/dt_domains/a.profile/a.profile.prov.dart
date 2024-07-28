@@ -17,4 +17,6 @@ class ProfileProv {
   );
 
   final rxPickedImage = RM.inject<XFile?>(() => null);
+
+  final rximageUrl = RM.inject<String>(() => '');
 }

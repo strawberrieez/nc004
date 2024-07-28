@@ -9,10 +9,12 @@ class ProfileAddCtrl {
 
   submit() => _dt.rxForm.submit();
 
-  createDoc() {
+  createDoc() async {
+    final id = UniqueKey().toString();
     final data = Profile(
-      id: UniqueKey().toString(),
+      id: id,
       createdAt: DateTime.now().toString(),
+      imageUrl: await _sv.getImageUrl(id),
       name: _dt.rxName.value,
       age: int.parse(_dt.rxAge.value),
       gender: _dt.rxGender.value,

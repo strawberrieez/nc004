@@ -34,4 +34,13 @@ class ProfileServ {
       },
     );
   }
+
+  Future<String> getImageUrl(String id) async {
+    final uin8List = await _pv.rxPickedImage.st?.readAsBytes();
+    final contentType = _pv.rxPickedImage.st?.mimeType;
+    final url = await FirebaseStorage.instance.ref(id).putData(uin8List!, SettableMetadata(contentType: contentType));
+    _pv.rximageUrl.st = await url.ref.getDownloadURL();
+    debugPrint(_pv.rximageUrl.st);
+    return _pv.rximageUrl.st;
+  }
 }

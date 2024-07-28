@@ -27,6 +27,13 @@ class ProfileListView extends StatelessWidget {
                     (index) => Card(
                       color: Colors.blueGrey,
                       child: ListTile(
+                        leading: data[index].imageUrl.isEmpty
+                            ? const Icon(Icons.person)
+                            : SizedBox(
+                                height: 50,
+                                width: 50,
+                                child: Image.network(data[index].imageUrl),
+                              ),
                         trailing: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
