@@ -17,7 +17,11 @@ class ProfileRepo {
     return profile;
   }
 
-  Future<void> createDoc(Profile data) async{
+  Future<void> createDoc(Profile data) async {
     await FirebaseFirestore.instance.collection('nc004').doc(data.id).set(data.toMap());
+  }
+
+  Future<void> deleteDoc(String id) async {
+    await FirebaseFirestore.instance.collection('nc004').doc(id).delete();
   }
 }

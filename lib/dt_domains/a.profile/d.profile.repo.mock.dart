@@ -17,4 +17,9 @@ class ProfileRepoMock implements ProfileRepo {
   Future<void> createDoc(Profile data) {
     throw UnimplementedError();
   }
+  
+  @override
+  Future<void> deleteDoc(String id) {
+    throw UnimplementedError();
+  }
 }

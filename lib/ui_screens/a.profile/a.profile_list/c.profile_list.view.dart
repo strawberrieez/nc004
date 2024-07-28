@@ -27,6 +27,12 @@ class ProfileListView extends StatelessWidget {
                     (index) => Card(
                       color: Colors.blueGrey,
                       child: ListTile(
+                        trailing: IconButton(
+                          onPressed: () {
+                            _ct.deleteDoc(data[index].id);
+                          },
+                          icon: const Icon(Icons.delete),
+                        ),
                         title: Text(data[index].name),
                         subtitle: Text(data[index].breeds),
                       ),

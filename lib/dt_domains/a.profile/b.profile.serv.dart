@@ -19,4 +19,9 @@ class ProfileServ {
     _pv.rxProfileList.st = [..._pv.rxProfileList.st]..insert(0, data);
     return _rp.createDoc(data);
   }
+
+  deleteDoc(String id) {
+    _pv.rxProfileList.st = [..._pv.rxProfileList.st]..removeWhere((element) => element.id == id);
+    return _rp.deleteDoc(id);
+  }
 }
