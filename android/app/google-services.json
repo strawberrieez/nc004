@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "396043868116",
+    "project_id": "nostracode-004",
+    "storage_bucket": "nostracode-004.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396043868116:android:d35b480791378fb2146841",
+        "android_client_info": {
+          "package_name": "com.nc004.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396043868116-7v1a4lsa33n1lkh83efivakj5ujfhq6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdBFSvw-iJoiwMpgZXU6HZbxWRatZiXpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396043868116-7v1a4lsa33n1lkh83efivakj5ujfhq6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
