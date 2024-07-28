@@ -24,4 +24,14 @@ class ProfileServ {
     _pv.rxProfileList.st = [..._pv.rxProfileList.st]..removeWhere((element) => element.id == id);
     return _rp.deleteDoc(id);
   }
+
+  updateDoc(Profile data) {
+    _rp.createDoc(data);
+    _pv.rxProfileList.setState(
+      (s) {
+        final index = _pv.rxProfileList.st.indexWhere((element) => element.id == data.id);
+        return s[index] = data;
+      },
+    );
+  }
 }

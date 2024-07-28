@@ -22,4 +22,16 @@ class ProfileListCtrl {
   }
 
   deleteDoc(String id) => _sv.deleteDoc(id);
+
+  updateDoc({required id, required createdAt}) {
+    final data = Profile(
+      id: id,
+      createdAt: createdAt,
+      name: 'bobby',
+      age: 52,
+      gender: 'male',
+      breeds: 'british short hair',
+    );
+    _sv.updateDoc(data);
+  }
 }
