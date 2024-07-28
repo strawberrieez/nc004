@@ -1,6 +1,9 @@
+import 'dart:js_interop';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:nc004/dt_domains/_models/_index.dart';
+import 'package:nc004/dt_domains/a.profile/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 import '../../../app/_index.dart';
@@ -18,3 +21,5 @@ part 'widgets/e.profile_add.echo.dart';
 ProfileAddData get _dt => Data.profileAdd.st;
 ProfileAddCtrl get _ct => Ctrl.profileAdd;
 
+ProfileProv get _pv => Prov.profile.st;
+ProfileServ get _sv => Serv.profile;
