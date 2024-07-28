@@ -35,5 +35,5 @@ class ProfileListCtrl {
     _sv.updateDoc(data);
   }
 
-
+  selectedId(String id) => _sv.selectedId(id);
 }

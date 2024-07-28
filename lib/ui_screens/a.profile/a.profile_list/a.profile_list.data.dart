@@ -9,5 +9,5 @@ class ProfileListData {
 
   final rxProfileList = _pv.rxProfileList;
 
-
+  final rxSelectedId = _pv.rxSelectedId;
 }

@@ -22,4 +22,9 @@ class ProfileRepoMock implements ProfileRepo {
   Future<void> deleteDoc(String id) {
     throw UnimplementedError();
   }
+  
+  @override
+  Future<Profile?> getDoc() {
+    throw UnimplementedError();
+  }
 }

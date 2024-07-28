@@ -24,4 +24,10 @@ class ProfileRepo {
   Future<void> deleteDoc(String id) async {
     await FirebaseFirestore.instance.collection('nc004').doc(id).delete();
   }
+
+  Future<Profile?> getDoc() async {
+    final getDoc = await FirebaseFirestore.instance.collection('nc004').doc(_pv.rxSelectedId.st).get();
+    final product = Profile.fromMap(getDoc.data() ?? {});
+    return product;
+  }
 }

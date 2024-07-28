@@ -27,6 +27,10 @@ class ProfileListView extends StatelessWidget {
                     (index) => Card(
                       color: Colors.blueGrey,
                       child: ListTile(
+                        onTap: () {
+                          _ct.selectedId(data[index].id);
+                          nav.to(Routes.profileDetail);
+                        },
                         leading: data[index].imageUrl.isEmpty
                             ? const Icon(Icons.person)
                             : SizedBox(

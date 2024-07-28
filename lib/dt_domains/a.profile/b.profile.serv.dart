@@ -43,4 +43,11 @@ class ProfileServ {
     debugPrint(_pv.rximageUrl.st);
     return _pv.rximageUrl.st;
   }
+
+  selectedId(String id) {
+    _pv.rxSelectedId.refresh();
+    _pv.rxSelectedId.st = id;
+  }
+
+  readDoc() => _pv.rxProfileDetail.stateAsync = _rp.getDoc();
 }

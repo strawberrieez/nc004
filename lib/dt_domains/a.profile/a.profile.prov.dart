@@ -19,4 +19,13 @@ class ProfileProv {
   final rxPickedImage = RM.inject<XFile?>(() => null);
 
   final rximageUrl = RM.inject<String>(() => '');
+
+  final rxSelectedId = RM.inject<String>(() => '');
+
+  final rxProfileDetail = RM.injectFuture<Profile?>(
+    () => Future.value(null),
+    sideEffects: SideEffects(
+      initState: () => _sv.readDoc(),
+    ),
+  );
 }
