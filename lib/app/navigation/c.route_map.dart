@@ -8,5 +8,9 @@ class RouteMap {
     Routes.sampleSatu: (RouteData data) => const SampleSatuView(),
     Routes.sampleDua: (RouteData data) => const SampleDuaView(),
     Routes.sampleTiga: (RouteData data) => const SampleTigaView(),
+    Routes.profileList: (RouteData data) => const ProfileListView(),
+    Routes.profileAdd: (RouteData data) => const ProfileAddView(),
+    Routes.profileDetail: (RouteData data) => const ProfileDetailView(),
+    Routes.profileEdit: (RouteData data) => const ProfileEditView(),
   };
 }
