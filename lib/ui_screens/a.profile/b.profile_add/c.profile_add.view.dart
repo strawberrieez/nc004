@@ -30,7 +30,7 @@ class ProfileAddView extends StatelessWidget {
                     debugPrint(_dt.rxPickedImage.st?.path.toString());
                   },
                   child: const Text(
-                    "Elevated Button",
+                    "pick image from gallery",
                   ),
                 ),
                 const AddName(),

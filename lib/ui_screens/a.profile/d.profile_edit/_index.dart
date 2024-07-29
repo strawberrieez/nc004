@@ -14,10 +14,11 @@ part 'a.profile_edit.data.dart';
 part 'b.profile_edit.ctrl.dart';
 part 'c.profile_edit.view.dart';
 part 'widgets/a.profile_edit.appbar.dart';
-part 'widgets/b.profile_edit.fab.dart';
-part 'widgets/c.profile_edit.charlie.dart';
-part 'widgets/d.profile_edit.delta.dart';
-part 'widgets/e.profile_edit.echo.dart';
+part 'widgets/b.profile_edit.name.dart';
+part 'widgets/c.profile_edit.age.dart';
+part 'widgets/d.profile_edit.gender.dart';
+part 'widgets/e.profile_edit.breeds.dart';
+part 'widgets/f.profile_edit.submit.dart';
 
 ProfileEditData get _dt => Data.profileEdit.st;
 ProfileEditCtrl get _ct => Ctrl.profileEdit;

@@ -10,7 +10,6 @@ class LoginView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: LoginAppbar(),
       ),
-      floatingActionButton: const LoginFab(),
       body: OnFormBuilder(
         listenTo: _dt.rxForm,
         builder: () => Center(

@@ -10,7 +10,6 @@ class ProfileEditView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: ProfileEditAppbar(),
       ),
-      floatingActionButton: const ProfileEditFab(),
       body: OnFormBuilder(
         listenTo: _dt.rxForm,
         builder: () => Center(
@@ -34,70 +33,19 @@ class ProfileEditView extends StatelessWidget {
                   _dt.rxPickedImage.st = await ImagePicker().pickImage(source: ImageSource.gallery);
                 },
                 child: const Text(
-                  "Elevated Button",
+                  "pick image from gallery",
                 ),
               ),
               const SizedBoxH(15),
-              OnFormBuilder(
-                listenTo: _dt.rxForm,
-                builder: () => TextField(
-                  controller: _dt.rxName.st.controller,
-                  decoration: InputDecoration(
-                    errorText: _dt.rxName.error,
-                    labelText: 'name',
-                    hintText: 'input cat name',
-                  ),
-                ),
-              ),
+              const EditName(),
               const SizedBoxH(15),
-              OnFormBuilder(
-                listenTo: _dt.rxForm,
-                builder: () => TextField(
-                  controller: _dt.rxAge.st.controller,
-                  decoration: InputDecoration(
-                    errorText: _dt.rxAge.error,
-                    labelText: 'age',
-                    hintText: 'input cat age in month',
-                  ),
-                ),
-              ),
+              const EditAge(),
               const SizedBoxH(15),
-              OnFormBuilder(
-                listenTo: _dt.rxForm,
-                builder: () => TextField(
-                  controller: _dt.rxGender.st.controller,
-                  decoration: InputDecoration(
-                    errorText: _dt.rxGender.error,
-                    labelText: 'gender',
-                    hintText: 'input cat gender',
-                  ),
-                ),
-              ),
+              const EditGender(),
               const SizedBoxH(15),
-              OnFormBuilder(
-                listenTo: _dt.rxForm,
-                builder: () => TextField(
-                  controller: _dt.rxBreeds.st.controller,
-                  decoration: InputDecoration(
-                    errorText: _dt.rxBreeds.error,
-                    labelText: 'breeds',
-                    hintText: 'input cat breeds',
-                  ),
-                ),
-              ),
+              const EditBreeds(),
               const SizedBoxH(15),
-              OnFormSubmissionBuilder(
-                listenTo: _dt.rxForm,
-                onSubmitting: () => const CircularProgressIndicator(),
-                child: ElevatedButton(
-                  onPressed: () async {
-                    await _ct.submit();
-                  },
-                  child: const Text(
-                    "submit",
-                  ),
-                ),
-              ),
+              const EditSubmit(),
             ],
           ),
         ),
@@ -105,3 +53,11 @@ class ProfileEditView extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+

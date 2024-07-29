@@ -10,7 +10,6 @@ class RegisterView extends StatelessWidget {
         preferredSize: Size.fromHeight(56),
         child: RegisterAppbar(),
       ),
-      floatingActionButton: const RegisterFab(),
       body: OnFormBuilder(
         listenTo: _dt.rxForm,
         builder: () => Center(

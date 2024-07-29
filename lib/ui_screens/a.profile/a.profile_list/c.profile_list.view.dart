@@ -41,22 +41,11 @@ class ProfileListView extends StatelessWidget {
                                   width: 50,
                                   child: Image.network(data[index].imageUrl),
                                 ),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              IconButton(
-                                onPressed: () {
-                                  _ct.deleteDoc(data[index].id);
-                                },
-                                icon: const Icon(Icons.delete),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  _ct.updateDoc(id: data[index].id, createdAt: data[index].createdAt);
-                                },
-                                icon: const Icon(Icons.update),
-                              ),
-                            ],
+                          trailing: IconButton(
+                            onPressed: () {
+                              _ct.deleteDoc(data[index].id);
+                            },
+                            icon: const Icon(Icons.delete),
                           ),
                           title: Text(data[index].name),
                           subtitle: Text(data[index].breeds),
