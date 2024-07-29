@@ -11,4 +11,6 @@ class Routes {
   static const profileAdd = '/profile_add';
   static const profileDetail = '/profile_detail';
   static const profileEdit = '/profile_edit';
+  static const login = '/login';
+  static const register = '/register';
 }

@@ -9,6 +9,8 @@ abstract class Data {
   static Injected<ProfileAddData> get profileAdd => _profileAddData;
   static Injected<ProfileDetailData> get profileDetail => _profileDetailData;
   static Injected<ProfileEditData> get profileEdit => _profileEditData;
+  static Injected<LoginData> get login => _loginData;
+  static Injected<RegisterData> get register => _registerData;
 }
 
 final _homeData = RM1.inj(HomeData(), Ctrl.home.init);
@@ -21,3 +23,6 @@ final _profileListData = RM1.inj(ProfileListData(), Ctrl.profileList.init);
 final _profileAddData = RM1.inj(ProfileAddData(), Ctrl.profileAdd.init);
 final _profileDetailData = RM1.inj(ProfileDetailData(), Ctrl.profileDetail.init);
 final _profileEditData = RM1.inj(ProfileEditData(), Ctrl.profileEdit.init);
+
+final _loginData = RM1.inj(LoginData(), Ctrl.login.init);
+final _registerData = RM1.inj(RegisterData(), Ctrl.register.init);

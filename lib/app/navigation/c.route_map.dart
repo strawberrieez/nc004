@@ -12,5 +12,7 @@ class RouteMap {
     Routes.profileAdd: (RouteData data) => const ProfileAddView(),
     Routes.profileDetail: (RouteData data) => const ProfileDetailView(),
     Routes.profileEdit: (RouteData data) => const ProfileEditView(),
+    Routes.login: (RouteData data) => const LoginView(),
+    Routes.register: (RouteData data) => const RegisterView(),
   };
 }

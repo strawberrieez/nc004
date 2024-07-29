@@ -10,3 +10,5 @@ export 'a.profile/a.profile_list/_index.dart';
 export 'a.profile/b.profile_add/_index.dart';
 export 'a.profile/c.profile_detail/_index.dart';
 export 'a.profile/d.profile_edit/_index.dart';
+export 'b.login/_index.dart';
+export 'c.register/_index.dart';

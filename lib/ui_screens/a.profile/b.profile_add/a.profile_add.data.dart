@@ -9,6 +9,7 @@ class ProfileAddData {
 
   final rxPickedImage = _pv.rxPickedImage;
 
+
   final rxForm = RM.injectForm(
     autovalidateMode: AutovalidateMode.onUserInteraction,
     submit: () async {

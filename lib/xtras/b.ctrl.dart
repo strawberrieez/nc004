@@ -9,4 +9,6 @@ abstract class Ctrl {
   static ProfileAddCtrl get profileAdd => ProfileAddCtrl();
   static ProfileDetailCtrl get profileDetail => ProfileDetailCtrl();
   static ProfileEditCtrl get profileEdit => ProfileEditCtrl();
+  static LoginCtrl get login => LoginCtrl();
+  static RegisterCtrl get register => RegisterCtrl();
 }

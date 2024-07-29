@@ -36,4 +36,12 @@ class ProfileListCtrl {
   }
 
   selectedId(String id) => _sv.selectedId(id);
+
+  signOut() {
+    _svAuth.signOut();
+  }
+
+  deleteCurrentUser() {
+    _svAuth.deleteCurrentUser();
+  }
 }

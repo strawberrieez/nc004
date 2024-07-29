@@ -10,6 +10,7 @@ Future<void> inits() async {
 
   Serv.sample.init();
   Serv.profile.init();
+  Serv.auth.init();
 
   logx.wtf('inits success');
 }

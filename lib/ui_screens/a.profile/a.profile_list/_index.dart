@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:nc004/dt_domains/_models/_index.dart';
 import 'package:nc004/dt_domains/a.profile/_index.dart';
+import 'package:nc004/dt_domains/b.auth/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 import '../../../app/_index.dart';
@@ -22,3 +23,5 @@ ProfileListCtrl get _ct => Ctrl.profileList;
 
 ProfileProv get _pv => Prov.profile.st;
 ProfileServ get _sv => Serv.profile;
+
+AuthServ get _svAuth => Serv.auth;
